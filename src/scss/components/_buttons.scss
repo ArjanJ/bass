@@ -1,0 +1,23 @@
+/*------------------------------------*\
+    #COMPONENTS - BUTTONS
+\*------------------------------------*/
+
+.c-btn {
+	@include c-btn;
+}
+
+.c-btn--success {
+	@include c-btn--success;
+}
+
+.c-btn--danger {
+	@include c-btn--danger;
+}
+
+.c-btn--attention {
+	@include c-btn--attention;
+}
+
+.c-btn--icon {
+	@include c-btn--icon;
+}

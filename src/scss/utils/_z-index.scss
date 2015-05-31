@@ -1,0 +1,12 @@
+/*------------------------------------*\
+    #UTILS - Z-INDEX
+\*------------------------------------*/
+
+$zindex: (
+	site-header: 100,
+	site-footer: 100
+);
+
+@function z($label) {
+    @return map-get($zindex, $label);
+}

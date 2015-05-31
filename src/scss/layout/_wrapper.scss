@@ -1,0 +1,17 @@
+/*------------------------------------*\
+    #LAYOUT - WRAPPER
+\*------------------------------------*/
+
+.wrapper {
+	@include cf;
+	max-width: 1200px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: $spacing;
+	padding-right: $spacing;
+
+	&--sm {
+		max-width: 540px;
+	}
+}

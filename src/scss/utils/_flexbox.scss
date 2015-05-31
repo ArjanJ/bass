@@ -1,0 +1,48 @@
+/*------------------------------------*\
+    #UTILS - FLEXBOX
+\*------------------------------------*/
+
+.u-flex {
+	display: flex;
+	flex-wrap: wrap;
+
+	&--col {
+		flex-direction: column;
+	}
+
+	&--middle {
+		align-items: center;
+	}
+
+	&--top {
+		align-items: flex-start;
+	}
+
+	&--bottom {
+		align-items: flex-end;
+	}
+
+	&--space-v {
+		align-items: space-between;
+	}
+
+	&--center {
+		justify-content: center;
+	}
+
+	&--start {
+		justify-content: flex-start;
+	}
+
+	&--end {
+		justify-content: flex-end;
+	}
+
+	&--space-h {
+		justify-content: space-between;
+	}
+
+	&--1 {
+		flex: 1;
+	}
+}

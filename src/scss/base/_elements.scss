@@ -1,0 +1,16 @@
+/*------------------------------------*\
+    #BASE - ELEMENTS
+\*------------------------------------*/
+
+body {
+	height: 100%;
+	font-family: $font-default;
+	@include font-size($font-normal);
+	overflow-x: hidden;
+	// for smooth font rendering in Chrome and Firefox
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizelegibility;
+	background-color: $white;
+}

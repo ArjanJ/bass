@@ -1,0 +1,39 @@
+/*------------------------------------*\
+    #UTILS - SPACING
+\*------------------------------------*/
+
+// margin top
+.u-mgtop--sm {
+	margin-top: $spacing / 2;
+}
+
+.u-mgtop {
+	margin-top: $spacing;
+}
+
+// margin bottom
+.u-mgbtm--sm {
+	margin-bottom: $spacing / 2;
+}
+
+.u-mgbtm {
+	margin-bottom: $spacing;
+}
+
+// margin right
+.u-mgright--sm {
+	margin-right: $spacing / 2;
+}
+
+.u-mgright {
+	margin-right: $spacing;
+}
+
+// margin left
+.u-mgleft--sm {
+	margin-left: $spacing / 2;
+}
+
+.u-mgleft {
+	margin-left: $spacing;
+}

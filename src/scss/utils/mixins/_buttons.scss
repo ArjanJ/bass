@@ -1,0 +1,75 @@
+/*------------------------------------*\
+    #MIXINS - BUTTONS
+\*------------------------------------*/
+
+@mixin c-btn {
+	display: inline-block; // if no flexbox support
+	display: inline-flex;
+
+	width: auto;
+
+	margin: (0) (2px) ($spacing / 2) (0);
+	padding: ($spacing / 2) ($spacing * 1.5);
+	border-radius: 2px;
+	overflow: hidden;
+
+	@include font-size(1.6);
+	text-align: center;
+
+	color: $dark-grey;
+	background: $light-grey;
+
+	will-change: background;
+
+	@include ease-out-normal;
+
+	&:last-child,
+	&:last-of-type {
+		margin-right: 0;
+	}
+
+	&:hover {
+		background: mix(black, $light-grey, 10);
+	}
+}
+
+@mixin c-btn--success {
+	color: $white;
+	background: $green;
+
+	&:hover {
+		background: mix(black, $green, 10);
+	}
+}
+
+@mixin c-btn--danger {
+	color: $white;
+	background: $red;
+
+	&:hover {
+		background: mix(black, $red, 10);
+	}
+}
+
+@mixin c-btn--attention {
+	color: $dark-grey;
+	background: $yellow;
+
+	&:hover {
+		background: mix(black, $yellow, 10);
+	}
+}
+
+@mixin c-btn--icon {
+	align-items: center;
+
+	> svg {
+		$size: 24px;
+		width: $size;
+		height: $size;
+		fill: $white;
+		margin-left: 5px;
+		background: rgba(black, 0.2);
+		border-radius: 50%;
+	}
+}

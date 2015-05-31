@@ -1,0 +1,38 @@
+{
+  "name": "bass",
+  "version": "1.0.0",
+  "description": "lightweight css and js framework",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ArjanJ/bass.git"
+  },
+  "keywords": [
+    "css",
+    "js",
+    "html"
+  ],
+  "author": "ArjanJ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArjanJ/bass/issues"
+  },
+  "homepage": "https://github.com/ArjanJ/bass",
+  "dependencies": {
+    "autoprefixer": "^5.1.1",
+    "browser-sync": "^2.7.3",
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "2.3.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-minify-css": "^1.1.1",
+    "gulp-postcss": "^5.1.7",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.1",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0",
+    "lost": "^6.2.0"
+  }
+}

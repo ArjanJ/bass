@@ -1,0 +1,55 @@
+/*------------------------------------*\
+    #MIXINS - BREAKPOINTS
+\*------------------------------------*/
+
+@mixin breakpoint($breakpoint) {
+	@media screen and (max-width: $breakpoint) {
+		@content;
+	}
+}
+
+@mixin xlarge {
+	@media screen and (max-width: 1280px) {
+		@content;
+	}
+}
+
+@mixin large {
+	@media screen and (max-width: 960px) {
+		@content;
+	}
+}
+
+@mixin medium {
+	@media screen and (max-width: 768px) {
+		@content;
+	}
+}
+
+@mixin small {
+	@media screen and (max-width: 480px) {
+		@content;
+	}
+}
+
+// min width breakpoints
+
+@mixin atleast-xlarge {
+	@media screen and (min-width: 1440px) {
+		@content;
+	}
+}
+
+@mixin atleast-xxlarge {
+	@media screen and (min-width: 1920px) {
+		@content;
+	}
+}
+
+// max height breakpoints
+
+@mixin short {
+	@media screen and (max-height: 600px) {
+		@content;
+	}
+}
