@@ -2,50 +2,48 @@
     #COMPONENTS - GRID
 \*------------------------------------*/
 
+// Lost Grid System (ratio, cycle, gutter)
+
 .c-grid {
 	lost-utility: clearfix;
 	width: 100%;
 
-	&__100 {
+	&__1 {
 		lost-column: 1;
 	}
 
-	&__75 {
+	&__3-4 {
 		lost-column: (3/4) (0) ($spacing / 2);
 	}
 
-	&__66 {
+	&__2-3 {
 		lost-column: (2/3) (0) ($spacing / 2);
 	}
 
-	&__50 {
+	&__1-2 {
 		lost-column: (1/2) (2) ($spacing / 2);
 	}
 
-	&__33 {
+	&__1-3 {
 		lost-column: (1/3) (0) ($spacing / 2);
 	}
 
-	&__25 {
+	&__1-4 {
 		lost-column: (1/4) (4) ($spacing / 2);
 	}
 
-	&__20 {
+	&__1-5 {
 		lost-column: (1/5) (5) ($spacing / 2);
 	}
 
-	&__75,
-	&__66,
-	&__50,
-	&__33,
-	&__25 ,
-	&__20 {
+	&__3-4,
+	&__2-3,
+	&__1-2,
+	&__1-3,
+	&__1-4 ,
+	&__1-5 {
 		@include large {
 			lost-column: 1;
 		}
-	}
-
-	&__padding {
-		padding: ($spacing) (0);
 	}
 }

@@ -3,13 +3,12 @@
 \*------------------------------------*/
 
 @mixin c-btn {
-	display: inline-block; // if no flexbox support
-	display: inline-flex;
+	display: inline-block;
 
-	width: auto;
+	min-width: $spacing * 6;
 
 	margin: (0) (2px) ($spacing / 2) (0);
-	padding: ($spacing / 2) ($spacing * 1.5);
+	padding: ($spacing / 2) ($spacing);
 	border-radius: 2px;
 	overflow: hidden;
 
@@ -61,15 +60,13 @@
 }
 
 @mixin c-btn--icon {
-	align-items: center;
+	text-align: left;
+}
 
-	> svg {
-		$size: 24px;
-		width: $size;
-		height: $size;
-		fill: $white;
-		margin-left: 5px;
-		background: rgba(black, 0.2);
-		border-radius: 50%;
-	}
+@mixin c-btn__glyph {
+	$size: 24px;
+	width: $size;
+	height: $size;
+	margin-right: $spacing / 4;
+	vertical-align: bottom;
 }
