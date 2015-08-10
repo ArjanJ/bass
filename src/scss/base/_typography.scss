@@ -3,39 +3,35 @@
 \*------------------------------------*/
 
 h1, h2, h3, h4, h5, h6 {
-	margin: (0) (0) ($spacing);
+	margin: 0 0 ($spacing / 1.5);
 	font-family: $font-heading;
-	font-weight: $font-weight-light;
+	letter-spacing: -1px;
+	// font-weight: $font-weight-light;
 	color: $black;
 }
 
 h1 {
-	font-size: 3.6rem;
+	@include font-size($font-xlarge);
 }
 
 h2 {
-	font-size: 2.8rem;
-	margin-bottom: $spacing / 2;
+	@include font-size($font-large);
 }
 
 h3 {
-	font-size: 2.2rem;
-	margin-bottom: $spacing / 3;
+	@include font-size($font-mmedium);
 }
 
 h4 {
-	font-size: 1.6rem;
-	margin-bottom: $spacing / 4;
+	@include font-size($font-medium);
 }
 
 h5 {
-	font-size: 1.2rem;
-	margin-bottom: $spacing / 5;
+	@include font-size($font-normal);
 }
 
 h6 {
-	font-size: 1.2rem;
-	margin-bottom: $spacing / 6;
+	@include font-size($font-small);
 }
 
 p {
@@ -43,6 +39,7 @@ p {
 	font-family: $font-default;
 	font-weight: $font-weight-normal;
 	color: $dark-grey;
+	@include font-size($font-normal);
 }
 
 strong {

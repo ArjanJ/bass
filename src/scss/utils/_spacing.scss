@@ -2,9 +2,14 @@
     #UTILS - SPACING
 \*------------------------------------*/
 
+// 0 margins
+.u-mg--none {
+	margin: 0;
+}
+
 // margin top
 .u-mgtop--sm {
-	margin-top: $spacing / 2;
+	margin-top: $spacing / 1.5;
 }
 
 .u-mgtop {
@@ -13,7 +18,7 @@
 
 // margin bottom
 .u-mgbtm--sm {
-	margin-bottom: $spacing / 2;
+	margin-bottom: $spacing / 1.5;
 }
 
 .u-mgbtm {
@@ -22,7 +27,7 @@
 
 // margin right
 .u-mgright--sm {
-	margin-right: $spacing / 2;
+	margin-right: $spacing / 1.5;
 }
 
 .u-mgright {
@@ -31,7 +36,7 @@
 
 // margin left
 .u-mgleft--sm {
-	margin-left: $spacing / 2;
+	margin-left: $spacing / 1.5;
 }
 
 .u-mgleft {

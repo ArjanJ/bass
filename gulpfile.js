@@ -44,7 +44,7 @@ gulp.task('scss', function() {
       lost(),
       autoprefixer()
     ]))
-    .pipe(sourcemaps.write('./'))
+    .pipe(sourcemaps.write(paths.scss))
     .pipe(minifyCSS())
     .pipe(gulp.dest(paths.css))
     .pipe(browserSync.stream());
