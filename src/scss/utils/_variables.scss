@@ -3,12 +3,11 @@
 \*------------------------------------*/
 
 // Spacing
-$spacing: 							2.4rem;
-$line-height: 					1.5;
+$spacing: 							2.25rem;
 
 // Font family
-$font-heading: 					'Source Sans Pro', 'Arial', sans-serif;
-$font-default:					'Source Sans Pro', 'Arial', sans-serif;
+$font-heading: 					'Open Sans', 'Arial', sans-serif;
+$font-default:					'Open Sans', 'Arial', sans-serif;
 
 // Font weights
 $font-weight-black: 		900;
@@ -17,18 +16,18 @@ $font-weight-semibold:  600;
 $font-weight-normal:  	400;
 $font-weight-light:  		300;
 
-// Font sizing
-$font-xsmall: 					1.2;
-$font-small: 						1.4;
-$font-normal: 					1.6;
-$font-medium: 					1.8;
-$font-mmedium: 					2.2;
-$font-large: 						3.0;
-$font-xlarge: 					4.0;
-$font-xxlarge: 					5.0;
-$font-xxxlarge: 				6.0;
-$font-massive: 					7.0;
-$font-giant: 						8.0;
+// Font sizing (Perfect Fifth ratio thing)
+$font-xsmall: 					0.667;
+$font-small: 						1.0;
+$font-normal: 					1.5;
+$font-medium: 					2.25;
+$font-mmedium: 					3.374;
+$font-large: 						5.062;
+$font-xlarge: 					7.594;
+$font-xxlarge: 					11.391;
+$font-xxxlarge: 				17.086;
+$font-massive: 					25.629;
+$font-giant: 						38.443;
 
 // Colors
 $black: 								#212121;
