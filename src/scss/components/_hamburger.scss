@@ -2,41 +2,36 @@
     #COMPONENTS - HAMBURGER
 \*------------------------------------*/
 
-$hamburger-color: black !default;
-$hamburger-thickness: 2px !default;
+$hamburger-color: $white !default;
+$hamburger-thickness: 3px !default;
+$hamburger-width: 30px !default;
 
-.c-burger {
+.c-hamburger {
+	position: relative;
+	width: $hamburger-width;
+	height: 19px;
+	border-top: $hamburger-thickness solid $hamburger-color;
 	cursor: pointer;
-	@include ease-out-slow;
 
-	.c-burger__patty {
-		will-change: transform, opacity;
-		width: 32px;
+	&:before,
+	&:after {
+		content: "";
+		position: absolute;
+		left: 0;
+		width: $hamburger-width;
 		height: $hamburger-thickness;
-		margin: 0 0 6px 0;
 		background: $hamburger-color;
-		opacity: 1;
-		transform: translate(0) rotate(0deg);
-		@include ease-out-fast;
-
-		&:last-child {
-			margin-bottom: 0;
-		}
 	}
 
-	&.c-burger--close {
+	&:before {
+		top: 5px;
+	}
 
-		.c-burger__patty:nth-child(1) {
-			transform: translate(0, 8px) rotate(-45deg);
-		}
+	&:after {
+		top: 13px;
+	}
 
-		.c-burger__patty:nth-child(2) {
-			transform: scale(0);
-			opacity: 0;
-		}
-
-		.c-burger__patty:nth-child(3) {
-			transform: translate(0, -8px) rotate(45deg);
-		}
+	@include bp-medium {
+		display: none;
 	}
 }

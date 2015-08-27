@@ -13,7 +13,7 @@ $font-default:					'Open Sans', 'Arial', sans-serif;
 $font-weight-black: 		900;
 $font-weight-bold:  		700;
 $font-weight-semibold:  600;
-$font-weight-normal:  	400;
+$font-weight-regular:  	400;
 $font-weight-light:  		300;
 
 // Font sizing (Perfect Fifth ratio thing)
@@ -28,6 +28,14 @@ $font-xxlarge: 					11.391;
 $font-xxxlarge: 				17.086;
 $font-massive: 					25.629;
 $font-giant: 						38.443;
+
+// Breakpoints
+$bp-xsmall: 						320px;
+$bp-small: 							480px;
+$bp-medium: 						768px;
+$bp-large: 							960px;
+$bp-xlarge: 						1280px;
+$bp-xxlarge: 						1440px;
 
 // Colors
 $black: 								#212121;

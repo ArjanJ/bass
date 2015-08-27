@@ -1,0 +1,24 @@
+/*------------------------------------*\
+    #COMPONENTS - NAV
+\*------------------------------------*/
+
+.c-nav {
+	display: none;
+
+	&__list {
+		display: flex;
+	}
+
+	&__item {
+		margin-left: $spacing;
+	}
+
+	&__link {
+		display: block;
+		color: $white;
+	}
+
+	@include bp-medium {
+		display: block;
+	}
+}

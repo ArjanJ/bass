@@ -3,10 +3,9 @@
 \*------------------------------------*/
 
 h1, h2, h3, h4, h5, h6 {
-	margin: 0 0 ($spacing / 1.5);
+	margin: 0 0 $spacing / 2.25 0;
 	font-family: $font-heading;
 	letter-spacing: -1px;
-	// font-weight: $font-weight-light;
 	color: $black;
 }
 
@@ -37,11 +36,7 @@ h6 {
 p {
 	margin: (0) (0) ($spacing);
 	font-family: $font-default;
-	font-weight: $font-weight-normal;
 	color: $dark-grey;
 	@include font-size($font-normal);
 }
 
-strong {
-	font-weight: $font-weight-black;
-}
