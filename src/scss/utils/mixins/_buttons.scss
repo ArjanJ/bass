@@ -68,5 +68,9 @@
 	width: $size;
 	height: $size;
 	margin-right: $spacing / 4;
-	vertical-align: bottom;
+	vertical-align: middle;
+
+	@include bp-medium {
+		vertical-align: top;
+	}
 }

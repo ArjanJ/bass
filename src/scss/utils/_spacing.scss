@@ -3,42 +3,83 @@
 \*------------------------------------*/
 
 // 0 margins
-.u-mg--none {
-	margin: 0;
+.u-mg-none {
+	margin: 0 !important;
 }
 
 // margin top
-.u-mgtop--sm {
+.u-mgt-sm {
 	margin-top: $spacing / 1.5;
 }
 
-.u-mgtop {
+.u-mgt {
 	margin-top: $spacing;
 }
 
-// margin bottom
-.u-mgbtm--sm {
-	margin-bottom: $spacing / 1.5;
-}
-
-.u-mgbtm {
-	margin-bottom: $spacing;
-}
-
 // margin right
-.u-mgright--sm {
+.u-mgr-sm {
 	margin-right: $spacing / 1.5;
 }
 
-.u-mgright {
+.u-mgr {
 	margin-right: $spacing;
 }
 
+// margin bottom
+.u-mgb-sm {
+	margin-bottom: $spacing / 1.5;
+}
+
+.u-mgb {
+	margin-bottom: $spacing;
+}
+
 // margin left
-.u-mgleft--sm {
+.u-mgl-sm {
 	margin-left: $spacing / 1.5;
 }
 
-.u-mgleft {
+.u-mgl {
 	margin-left: $spacing;
+}
+
+// 0 margins
+.u-pd-none {
+	padding: 0 !important;
+}
+
+// padding top
+.u-pdt-sm {
+	padding-top: $spacing / 1.5;
+}
+
+.u-pdt {
+	padding-top: $spacing;
+}
+
+// padding right
+.u-pdr-sm {
+	padding-right: $spacing / 1.5;
+}
+
+.u-pdr {
+	padding-right: $spacing;
+}
+
+// padding bottom
+.u-pdb-sm {
+	padding-bottom: $spacing / 1.5;
+}
+
+.u-pdb {
+	padding-bottom: $spacing;
+}
+
+// padding left
+.u-pdl-sm {
+	padding-left: $spacing / 1.5;
+}
+
+.u-pdl {
+	padding-left: $spacing;
 }

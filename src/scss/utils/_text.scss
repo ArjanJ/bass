@@ -1,6 +1,26 @@
 /*------------------------------------*\
-    #UTILS - FONT SIZES
+    #UTILS - TEXT
 \*------------------------------------*/
+
+.u-txt-upper {
+	text-transform: uppercase;
+}
+
+.u-txt-lower {
+	text-transform: lowercase;
+}
+
+.u-font-light {
+	font-weight: $font-weight-light;
+}
+
+.u-font-regular {
+	font-weight: $font-weight-regular;
+}
+
+.u-font-bold {
+	font-weight: $font-weight-bold;
+}
 
 .u-font-xsmall {
 	@include font-size($font-xsmall);

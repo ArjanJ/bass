@@ -2,54 +2,38 @@
     #MIXINS - BREAKPOINTS
 \*------------------------------------*/
 
-@mixin breakpoint($breakpoint) {
-	@media screen and (max-width: $breakpoint) {
+@mixin bp-xsmall {
+	@media screen and (min-width: $bp-xsmall) {
 		@content;
 	}
 }
 
-@mixin xlarge {
-	@media screen and (max-width: 1280px) {
+@mixin bp-small {
+	@media screen and (min-width: $bp-small) {
 		@content;
 	}
 }
 
-@mixin large {
-	@media screen and (max-width: 960px) {
+@mixin bp-medium {
+	@media screen and (min-width: $bp-medium) {
 		@content;
 	}
 }
 
-@mixin medium {
-	@media screen and (max-width: 768px) {
+@mixin bp-large {
+	@media screen and (min-width: $bp-large) {
 		@content;
 	}
 }
 
-@mixin small {
-	@media screen and (max-width: 480px) {
+@mixin bp-xlarge {
+	@media screen and (min-width: $bp-xlarge) {
 		@content;
 	}
 }
 
-// min width breakpoints
-
-@mixin atleast-xlarge {
-	@media screen and (min-width: 1440px) {
-		@content;
-	}
-}
-
-@mixin atleast-xxlarge {
-	@media screen and (min-width: 1920px) {
-		@content;
-	}
-}
-
-// max height breakpoints
-
-@mixin short {
-	@media screen and (max-height: 600px) {
+@mixin bp-xxlarge {
+	@media screen and (min-width: $bp-xxlarge) {
 		@content;
 	}
 }
