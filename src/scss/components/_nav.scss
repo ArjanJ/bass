@@ -14,9 +14,13 @@
 	transform: translate(100%, 0);
 	@include ease('in-out', 0.25);
 
-	&--active {
+	&--is-animating {
 		transform: translate(0, 0);
 		@include ease('in-out', 0.25);
+	}
+
+	&--active {
+		display: block;
 	}
 
 	&__list {
@@ -62,6 +66,11 @@
 		&__link {
 			@include font-size($font-normal);
 			padding: 0;
+
+			&:hover {
+				background: none;
+				color: mix(black, $white, 10);
+			}
 		}
 	}
 }
