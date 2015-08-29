@@ -3,32 +3,59 @@
 \*------------------------------------*/
 
 $hamburger-color: $white !default;
-$hamburger-thickness: 3px !default;
+$hamburger-thickness: 2px !default;
 $hamburger-width: 30px !default;
 
 .c-hamburger {
 	position: relative;
 	width: $hamburger-width;
-	height: 19px;
-	border-top: $hamburger-thickness solid $hamburger-color;
+	height: 17px;
 	cursor: pointer;
+	// remove tap highlight on android devices
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
 
-	&:before,
-	&:after {
-		content: "";
-		position: absolute;
-		left: 0;
-		width: $hamburger-width;
-		height: $hamburger-thickness;
-		background: $hamburger-color;
-	}
+  &__lines {
+  	width: $hamburger-width;
+  	height: $hamburger-thickness;
+  	background: $hamburger-color;
+    pointer-events: none;
+  	@include ease('in-out', 0.25);
 
-	&:before {
-		top: 5px;
-	}
+  	&:before,
+  	&:after {
+  		content: "";
+  		position: absolute;
+  		left: 0;
+  		width: $hamburger-width;
+  		height: $hamburger-thickness;
+  		background: $hamburger-color;
+  		@include ease('in-out', 0.25);
+  	}
 
-	&:after {
-		top: 13px;
+  	&:before {
+  		top: 7px;
+  	}
+
+  	&:after {
+  		top: 14px;
+  	}
+  }
+
+	// transform into 'x'
+	&--close {
+
+		.c-hamburger__lines {
+			transform: rotate(45deg) translate(5px, 5px);
+
+			&:before {
+				opacity: 0;
+			}
+
+			&:after {
+				transform: rotate(-90deg) translateX(14px);
+			}
+		}
 	}
 
 	@include bp-medium {

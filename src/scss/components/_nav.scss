@@ -4,21 +4,64 @@
 
 .c-nav {
 	display: none;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	height: calc(100vh - 54px);
+	width: 100%;
+	background: $black;
+	will-change: transform;
+	transform: translate(100%, 0);
+	@include ease('in-out', 0.25);
+
+	&--active {
+		transform: translate(0, 0);
+		@include ease('in-out', 0.25);
+	}
 
 	&__list {
-		display: flex;
+		margin-top: $spacing;
 	}
 
 	&__item {
-		margin-left: $spacing;
+		
 	}
 
 	&__link {
 		display: block;
+		padding: ($spacing / 1.5) ($spacing);
 		color: $white;
+		@include font-size($font-medium);
+
+		&:hover {
+			background: mix(white, $black, 10);
+		}
+	}
+
+	@include bp-small {
+		width: 300px;
 	}
 
 	@include bp-medium {
 		display: block;
+		transform: none;
+		position: static;
+		height: auto;
+		width: auto;
+		background: none;
+
+		&__list {
+			display: flex;
+			margin: 0;
+		}
+
+		&__item {
+			margin: 0 0 0 $spacing;
+		}
+
+		&__link {
+			@include font-size($font-normal);
+			padding: 0;
+		}
 	}
 }
