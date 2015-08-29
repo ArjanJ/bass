@@ -345,18 +345,16 @@ var Nav = require('./nav');
 buoy.ready(function() {
 	Nav.init();
 });
-
 },{"./nav":3,"buoy/dist/js/buoy":1}],3:[function(require,module,exports){
-(function (global){
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
-    define(['buoy'], factory(root));
+    define(['buoy/dist/js/buoy'], factory());
   } else if (typeof exports === 'object') {
     module.exports = factory(require('buoy/dist/js/buoy'));
   } else {
-    root.nav = factory(root, root.buoy);
+    root.Nav = factory(root.buoy);
   }
-})(typeof global !== 'undefined' ? global : this.window || this.global, function(root) {
+})(this, function(buoy) {
 
   'use strict';
 
@@ -365,33 +363,16 @@ buoy.ready(function() {
   //
 
   var Nav = {}; // Object for public APIs
-  var supports = !!document.querySelector && !!global.addEventListener; // Feature test
+  var supports = !!document.querySelector && !!window.addEventListener; // Feature test
   var settings; // Placeholder variables
 
   // Default settings
   var defaults = {
-    callbackBefore: function() {},
-    callbackAfter: function() {}
+    NAV_ELEMENT: 'c-nav',
+    NAV_ACTIVE_CLASS: 'c-nav--active',
+    TOGGLE_ELEMENT: 'c-hamburger',
+    TOGGLE_ACTIVE_CLASS: 'c-hamburger--close'
   };
-
-  // css classes
-  var cssClasses = {
-  	NAV:               'c-nav',
-  	NAV_ACTIVE:        'c-nav--active',
-    NAV_IS_ANIMATING:  'c-nav--is-animating',
-  	HAMBURGER:         'c-hamburger',
-  	HAMBURGER_CLOSE:   'c-hamburger--close',
-    HAMBURGER_LINES:   'c-hamburger__lines'
-  };
-
-  var toggle = document.querySelector('.' + cssClasses.HAMBURGER);
-  var dataToggle = toggle.getAttribute('data-toggle');
-  var nav;
-  if (dataToggle && dataToggle.length) {
-    nav = document.querySelector('#' + dataToggle);
-  } else {
-    throw new Error('data-toggle attribute missing.');
-  }
 
   //
   // Methods
@@ -403,38 +384,44 @@ buoy.ready(function() {
    */
   var toggleNav = function(event) {
 
-    if (event.target === toggle && !nav.classList.contains(cssClasses.NAV_ACTIVE)) {
+    var toggle = document.querySelector('.' + settings.TOGGLE_ELEMENT);
+    var nav = document.querySelector('.' + settings.NAV_ELEMENT);
 
-      nav.classList.add(cssClasses.NAV_ACTIVE);
+    if (toggle && event.target === toggle || toggle && event.target === toggle.children[0]) {
+      if (!nav.classList.contains(settings.NAV_ACTIVE_CLASS)) {
 
-      global.setTimeout(function() {
-        nav.classList.add(cssClasses.NAV_IS_ANIMATING);
-        toggle.classList.add(cssClasses.HAMBURGER_CLOSE);
-      }, 10);
+        nav.style.display = 'block';
 
-      return;
-    } else if (event.target == toggle && nav.classList.contains(cssClasses.NAV_ACTIVE)) {
+        window.setTimeout(function() {
+          nav.classList.add(settings.NAV_ACTIVE_CLASS);
+          toggle.classList.add(settings.TOGGLE_ACTIVE_CLASS);
+        }, 10);
 
-      nav.classList.remove(cssClasses.NAV_IS_ANIMATING);
-      toggle.classList.remove(cssClasses.HAMBURGER_CLOSE);
+        return;
+      } else if (nav.classList.contains(settings.NAV_ACTIVE_CLASS)) {
 
-      global.setTimeout(function() {
-        nav.classList.remove(cssClasses.NAV_ACTIVE);
-      }, 500);
+        nav.classList.remove(settings.NAV_ACTIVE_CLASS);
+        toggle.classList.remove(settings.TOGGLE_ACTIVE_CLASS);
+
+        window.setTimeout(function() {
+          nav.style.display = 'none';
+        }, 400);
+
+        return;
+      }
     }
 
-    if (nav.classList.contains(cssClasses.NAV_ACTIVE) && toggle.classList.contains(cssClasses.HAMBURGER_CLOSE)) {
+    if (nav.classList.contains(settings.NAV_ACTIVE_CLASS) && toggle.classList.contains(settings.TOGGLE_ACTIVE_CLASS)) {
 
-      nav.classList.remove(cssClasses.NAV_IS_ANIMATING);
-      toggle.classList.remove(cssClasses.HAMBURGER_CLOSE);
+      nav.classList.remove(settings.NAV_ACTIVE_CLASS);
+      toggle.classList.remove(settings.TOGGLE_ACTIVE_CLASS);
 
-      global.setTimeout(function() {
-        nav.classList.remove(cssClasses.NAV_ACTIVE);
-      }, 500);
+      window.setTimeout(function() {
+        nav.style.display = 'none';
+      }, 400);
     }
 
   };
-
 
   /**
    * Handle events
@@ -456,11 +443,6 @@ buoy.ready(function() {
 
     // If plugin isn't already initialized, stop
     if (!settings) return;
-
-    // Remove init class for conditional CSS
-    document.documentElement.classList.remove(settings.initClass);
-
-    // @todo Undo any other init functions...
 
     // Remove event listeners
     document.removeEventListener('click', eventHandler, false);
@@ -486,9 +468,6 @@ buoy.ready(function() {
     // Merge user options with defaults
     settings = buoy.extend(defaults, options || {});
 
-    // Add class to HTML element to activate conditional CSS
-    // document.documentElement.classList.add(settings.initClass);
-
     // Listen for click events
     document.addEventListener('click', eventHandler, false);
 
@@ -503,5 +482,4 @@ buoy.ready(function() {
 
 });
 
-}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"buoy/dist/js/buoy":1}]},{},[2]);

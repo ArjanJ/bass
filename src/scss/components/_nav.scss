@@ -14,13 +14,9 @@
 	transform: translate(100%, 0);
 	@include ease('in-out', 0.25);
 
-	&--is-animating {
+	&--active {
 		transform: translate(0, 0);
 		@include ease('in-out', 0.25);
-	}
-
-	&--active {
-		display: block;
 	}
 
 	&__list {
