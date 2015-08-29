@@ -26,11 +26,12 @@
 
   // css classes
   var cssClasses = {
-  	NAV:             'c-nav',
-  	NAV_ACTIVE:      'c-nav--active',
-  	HAMBURGER:       'c-hamburger',
-  	HAMBURGER_CLOSE: 'c-hamburger--close',
-    HAMBURGER_LINES: 'c-hamburger__lines'
+  	NAV:               'c-nav',
+  	NAV_ACTIVE:        'c-nav--active',
+    NAV_IS_ANIMATING:  'c-nav--is-animating',
+  	HAMBURGER:         'c-hamburger',
+  	HAMBURGER_CLOSE:   'c-hamburger--close',
+    HAMBURGER_LINES:   'c-hamburger__lines'
   };
 
   var toggle = document.querySelector('.' + cssClasses.HAMBURGER);
@@ -52,22 +53,34 @@
    */
   var toggleNav = function(event) {
 
-    if (event.target === toggle) {
-      nav.style.display = 'block';
+    if (event.target === toggle && !nav.classList.contains(cssClasses.NAV_ACTIVE)) {
+
+      nav.classList.add(cssClasses.NAV_ACTIVE);
+
       global.setTimeout(function() {
-         nav.classList.toggle(cssClasses.NAV_ACTIVE);
-      toggle.classList.toggle(cssClasses.HAMBURGER_CLOSE);
-    }, 10);
+        nav.classList.add(cssClasses.NAV_IS_ANIMATING);
+        toggle.classList.add(cssClasses.HAMBURGER_CLOSE);
+      }, 10);
 
       return;
+    } else if (event.target == toggle && nav.classList.contains(cssClasses.NAV_ACTIVE)) {
+
+      nav.classList.remove(cssClasses.NAV_IS_ANIMATING);
+      toggle.classList.remove(cssClasses.HAMBURGER_CLOSE);
+
+      global.setTimeout(function() {
+        nav.classList.remove(cssClasses.NAV_ACTIVE);
+      }, 500);
     }
 
     if (nav.classList.contains(cssClasses.NAV_ACTIVE) && toggle.classList.contains(cssClasses.HAMBURGER_CLOSE)) {
-      nav.style.display = 'none';
+
+      nav.classList.remove(cssClasses.NAV_IS_ANIMATING);
+      toggle.classList.remove(cssClasses.HAMBURGER_CLOSE);
+
       global.setTimeout(function() {
         nav.classList.remove(cssClasses.NAV_ACTIVE);
-        toggle.classList.remove(cssClasses.HAMBURGER_CLOSE);
-      }, 10);
+      }, 500);
     }
 
   };
