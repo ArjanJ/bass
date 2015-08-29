@@ -19,7 +19,7 @@ $hamburger-width: 30px !default;
   	width: $hamburger-width;
   	height: $hamburger-thickness;
   	background: $hamburger-color;
-    pointer-events: none;
+    // pointer-events: none;
   	@include ease('in-out', 0.25);
 
   	&:before,
