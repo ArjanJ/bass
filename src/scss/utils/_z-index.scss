@@ -3,10 +3,13 @@
 \*------------------------------------*/
 
 $zindex: (
-	site-header: 100,
-	site-footer: 100
+	hamburger: 100
 );
 
 @function z($label) {
-    @return map-get($zindex, $label);
+  @return map-get($zindex, $label);
+}
+
+.c-hamburger {
+	z-index: z(hamburger);
 }

@@ -20,7 +20,7 @@
 
 	will-change: background;
 
-	@include ease-out-normal;
+	@include ease('out');
 
 	&:last-child,
 	&:last-of-type {

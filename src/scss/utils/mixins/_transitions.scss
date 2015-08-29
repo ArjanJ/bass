@@ -2,38 +2,15 @@
     #MIXINS - TRANSITIONS
 \*------------------------------------*/
 
-@mixin ease-in-fast {
-	transition: all .25s ease-in;
-}
+$default-ease: 'out' !default;
+$default-speed: 0.25 !default;
 
-@mixin ease-in-normal {
-	transition: all .35s ease-in;
-}
-
-@mixin ease-in-slow {
-	transition: all .45s ease-in;
-}
-
-@mixin ease-fast {
-	transition: all .25s ease-in-out;
-}
-
-@mixin ease-normal {
-	transition: all .35s ease-in-out;
-}
-
-@mixin ease-slow {
-	transition: all .45s ease-in-out;
-}
-
-@mixin ease-out-fast {
-	transition: all .35s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-@mixin ease-out-normal {
-	transition: all .45s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-@mixin ease-out-slow {
-	transition: all .55s cubic-bezier(0.23, 1, 0.32, 1);
+@mixin ease($type: $default-ease, $speed: $default-speed) {
+	@if ($type == 'in') {
+		transition: all $speed+s $ease-in;
+	} @elseif ($type == 'out') {
+		transition: all $speed+s $ease-out;
+	} @elseif ($type == 'in-out') {
+		transition: all $speed+s $ease-in-out;
+	}
 }
