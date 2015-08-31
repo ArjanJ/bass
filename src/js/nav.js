@@ -20,11 +20,16 @@
 
   // Default settings
   var defaults = {
-    NAV_ELEMENT: 'c-nav',
-    NAV_ACTIVE_CLASS: 'c-nav--active',
     TOGGLE_ELEMENT: 'c-hamburger',
     TOGGLE_ACTIVE_CLASS: 'c-hamburger--close'
   };
+
+  // Elements
+  var toggle = document.querySelector('.' + defaults.TOGGLE_ELEMENT); // the hamburger
+  if (toggle && toggle.hasAttribute('data-toggle') && toggle.hasAttribute('data-toggle-class')) {
+    var nav = document.querySelector('#' + toggle.getAttribute('data-toggle')); // the navigation
+    var toggleTargetClass = toggle.getAttribute('data-toggle-class'); // the class that animates the navigation in/out
+  }
 
   //
   // Methods
@@ -36,23 +41,27 @@
    */
   var toggleNav = function(event) {
 
-    var toggle = document.querySelector('.' + settings.TOGGLE_ELEMENT);
-    var nav = document.querySelector('.' + settings.NAV_ELEMENT);
+    // check if the clicked element is the hamburger
+    if (event.target === toggle) {
 
-    if (toggle && event.target === toggle || toggle && event.target === toggle.children[0]) {
-      if (!nav.classList.contains(settings.NAV_ACTIVE_CLASS)) {
+      // if the nav doesn't contain the active class then add it
+      if (!nav.classList.contains(toggleTargetClass)) {
 
+        // first make the nav visible
         nav.style.display = 'block';
 
+        // then animate it by adding the active class
         window.setTimeout(function() {
-          nav.classList.add(settings.NAV_ACTIVE_CLASS);
+          nav.classList.add(toggleTargetClass);
           toggle.classList.add(settings.TOGGLE_ACTIVE_CLASS);
         }, 10);
 
         return;
-      } else if (nav.classList.contains(settings.NAV_ACTIVE_CLASS)) {
 
-        nav.classList.remove(settings.NAV_ACTIVE_CLASS);
+        // if the nav contains the active class then remove it
+      } else if (nav.classList.contains(toggleTargetClass)) {
+
+        nav.classList.remove(toggleTargetClass);
         toggle.classList.remove(settings.TOGGLE_ACTIVE_CLASS);
 
         window.setTimeout(function() {
@@ -61,11 +70,11 @@
 
         return;
       }
-    }
 
-    if (nav.classList.contains(settings.NAV_ACTIVE_CLASS) && toggle.classList.contains(settings.TOGGLE_ACTIVE_CLASS)) {
+      // if the clicked element isn't the hamburger && the nav has the active class, then remove it
+    } else if (nav.classList.contains(toggleTargetClass) && toggle.classList.contains(settings.TOGGLE_ACTIVE_CLASS)) {
 
-      nav.classList.remove(settings.NAV_ACTIVE_CLASS);
+      nav.classList.remove(toggleTargetClass);
       toggle.classList.remove(settings.TOGGLE_ACTIVE_CLASS);
 
       window.setTimeout(function() {
