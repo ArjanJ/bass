@@ -3,6 +3,7 @@
 \*------------------------------------*/
 
 @mixin c-btn {
+	@include cf;
 	display: inline-block;
 
 	min-width: $spacing * 6;
@@ -11,6 +12,7 @@
 	padding: ($spacing / 2) ($spacing);
 	border-radius: 2px;
 	overflow: hidden;
+	cursor: pointer;
 
 	@include font-size(1.6);
 	text-align: center;
@@ -27,8 +29,13 @@
 		margin-right: 0;
 	}
 
-	&:hover {
+	&:hover,
+	&:focus {
 		background: mix(black, $light-grey, 10);
+	}
+
+	&:focus {
+		outline: none;
 	}
 }
 
@@ -36,7 +43,8 @@
 	color: $white;
 	background: $green;
 
-	&:hover {
+	&:hover,
+	&:focus {
 		background: mix(black, $green, 10);
 	}
 }
@@ -45,7 +53,8 @@
 	color: $white;
 	background: $red;
 
-	&:hover {
+	&:hover,
+	&:focus {
 		background: mix(black, $red, 10);
 	}
 }
@@ -54,21 +63,27 @@
 	color: $dark-grey;
 	background: $yellow;
 
-	&:hover {
+	&:hover,
+	&:focus {
 		background: mix(black, $yellow, 10);
 	}
 }
 
 @mixin c-btn--icon {
-	text-align: left;
+	@include cf;
+	min-width: 200px;
+
+	span {
+		float: left;
+	}
 }
 
 @mixin c-btn__glyph {
+	float: right;
+	margin-left: $spacing / 3;
 	$size: 24px;
 	width: $size;
 	height: $size;
-	margin-right: $spacing / 4;
-	vertical-align: middle;
 
 	@include bp-medium {
 		vertical-align: top;

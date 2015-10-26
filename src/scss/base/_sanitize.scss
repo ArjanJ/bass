@@ -140,12 +140,8 @@ textarea {
 :root {
 	box-sizing: $root-box-sizing;
 	cursor: $root-cursor;
-	font: 0.5rem/#{$root-line-height} $root-font-family;
+	font: #{$root-font-size}/#{$root-line-height} $root-font-family;
 	text-rendering: $root-text-rendering;
-
-	@include bp-medium {
-		font: #{$root-font-size}/#{$root-line-height} $root-font-family;
-	}
 }
 
 // specify the text decoration of anchors

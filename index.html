@@ -11,160 +11,183 @@
 	<link rel="stylesheet" href="./dist/css/global.css">
 </head>
 <body>
+
 	<header class="u-flex u-flex--middle u-flex--space-h u-bg-black u-pdl u-pdr u-pdt-sm u-pdb-sm u-mgb">
-		<a href="" class="u-clr-white u-font-bold u-txt-upper u-font-medium">Bass</a>
-		<div class="c-hamburger" data-toggle="nav" data-toggle-class="c-nav--active">
-			<div class="c-hamburger__lines"></div>
+		<a href="" class="u-clr-white u-font-bold u-txt-upper u-font-4">Bass</a>
+
+		<div class="bass-nav">
+			<button type="button" class="bass-nav__hamburger">
+				<span class="bass-nav__hamburger-line"></span>
+				<span class="bass-nav__hamburger-line"></span>
+				<span class="bass-nav__hamburger-line"></span>
+			</button>
+
+			<nav class="bass-nav__nav">
+				<ul class="bass-nav__list">
+					<li class="bass-nav__item">
+						<a href="" class="bass-nav__link">About</a>
+					</li>
+					<li class="bass-nav__item">
+						<a href="" class="bass-nav__link">Services</a>
+					</li>
+					<li class="bass-nav__item">
+						<a href="" class="bass-nav__link">Blog</a>
+					</li>
+					<li class="bass-nav__item">
+						<a href="" class="bass-nav__link">Contact</a>
+					</li>
+				</ul>
+			</nav>
+
+			<div class="bass-nav__overlay"></div>
 		</div>
-		<nav class="c-nav" role="navigation" id="nav">
-			<ul class="c-nav__list">
-				<li class="c-nav__item">
-					<a href="" class="c-nav__link">Docs</a>
-				</li>
-				<li class="c-nav__item">
-					<a href="" class="c-nav__link">Examples</a>
-				</li>
-				<li class="c-nav__item">
-					<a href="" class="c-nav__link">About</a>
-				</li>
-				<li class="c-nav__item">
-					<a href="" class="c-nav__link">Donate</a>
-				</li>
-			</ul>
-		</nav>
 	</header>
-	<div class="wrapper">
-		<div class="wrapper--sm">
-			<h1 class="u-font-mmedium">Typography</h1>
-			<h1>Heading 1</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo aliquid beatae mollitia deleniti natus, veritatis, ipsa et. Reprehenderit rerum illum ipsum eligendi incidunt, ullam aspernatur quo, provident, non laboriosam libero.</p>
-			<h2>Heading 2</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ut tempore ducimus nostrum id velit nesciunt minus iure cumque laudantium voluptate libero exercitationem voluptates, provident unde animi recusandae quo mollitia!</p>
-			<h3>Heading 3</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum iste eaque commodi reprehenderit excepturi culpa temporibus alias officiis, praesentium magni animi quibusdam voluptatibus ipsa. Fugit hic explicabo, vel magnam numquam!</p>
-			<h4>Heading 4</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas maxime enim sed facere repellendus distinctio qui voluptatibus. Aut consequatur et molestias reprehenderit similique aspernatur optio aliquid, dolorem harum accusamus veniam.</p>
-			<h5>Heading 5</h5>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam vel deserunt reprehenderit nulla corrupti, adipisci dolor provident recusandae, mollitia consequatur sint temporibus hic expedita sapiente praesentium aut magni id eius!</p>
-			<h6>Heading 6</h6>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse eum quo sapiente maiores. Minus nostrum asperiores, repudiandae accusamus. Maiores doloribus sint, ipsam voluptate perspiciatis, soluta ab fuga molestias odit tenetur.</p>
-		</div>
 
-		<h1 class="u-font-mmedium">Grid</h1>
-		<div class="c-grid u-mgb-sm">
-			<div class="c-grid__1 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
-				<p class="u-mg-none">c-grid__1</p>
-			</div>
+	<section class="u-vh-50 u-flex u-flex--middle u-align-center">
+		<div class="wrapper wrapper--sm">
+			<h1 class="u-font-light">Bass</h1>
+			<p>A simple front-end framework containing helpful CSS and JavaScript components.</p>
 		</div>
-		<div class="c-grid u-mgb-sm">
-			<div class="c-grid__4-5 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
-				<p class="u-mg-none">c-grid__4-5</p>
-			</div>
-			<div class="c-grid__1-5 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
-				<p class="u-mg-none">c-grid__1-5</p>
-			</div>
-		</div>
-		<div class="c-grid u-mgb-sm">
-			<div class="c-grid__3-4 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
-				<p class="u-mg-none">c-grid__3-4</p>
-			</div>
-			<div class="c-grid__1-4 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
-				<p class="u-mg-none">c-grid__1-4</p>
-			</div>
-		</div>
-		<div class="c-grid u-mgb-sm">
-			<div class="c-grid__2-3 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
-				<p class="u-mg-none">c-grid__2-3</p>
-			</div>
-			<div class="c-grid__1-3 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
-				<p class="u-mg-none">c-grid__1-3</p>
-			</div>
-		</div>
-		<div class="c-grid u-mgb-sm">
-			<div class="c-grid__3-5 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
-				<p class="u-mg-none">c-grid__3-5</p>
-			</div>
-			<div class="c-grid__2-5 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
-				<p class="u-mg-none">c-grid__2-5</p>
-			</div>
-		</div>
-		<div class="c-grid u-mgb-sm">
-			<div class="c-grid__1-2 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
-				<p class="u-mg-none">c-grid__1-2</p>
-			</div>
-			<div class="c-grid__1-2 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
-				<p class="u-mg-none">c-grid__1-2</p>
-			</div>
-		</div>
-		<div class="c-grid u-mgb-sm">
-			<div class="c-grid__2-5 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
-				<p class="u-mg-none">c-grid__2-5</p>
-			</div>
-			<div class="c-grid__3-5 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
-				<p class="u-mg-none">c-grid__3-5</p>
-			</div>
-		</div>
-		<div class="c-grid u-mgb-sm">
-			<div class="c-grid__1-3 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
-				<p class="u-mg-none">c-grid__1-3</p>
-			</div>
-			<div class="c-grid__1-3 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
-				<p class="u-mg-none">c-grid__1-3</p>
-			</div>
-			<div class="c-grid__1-3 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
-				<p class="u-mg-none">c-grid__1-3</p>
-			</div>
-		</div>
-		<div class="c-grid u-mgb-sm">
-			<div class="c-grid__1-4 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
-				<p class="u-mg-none">c-grid__1-4</p>
-			</div>
-			<div class="c-grid__1-4 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
-				<p class="u-mg-none">c-grid__1-4</p>
-			</div>
-			<div class="c-grid__1-4 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
-				<p class="u-mg-none">c-grid__1-4</p>
-			</div>
-			<div class="c-grid__1-4 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
-				<p class="u-mg-none">c-grid__1-4</p>
-			</div>
-		</div>
-		<div class="c-grid u-mgb-sm">
-			<div class="c-grid__1-5 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
-				<p class="u-mg-none">c-grid__1-5</p>
-			</div>
-			<div class="c-grid__1-5 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
-				<p class="u-mg-none">c-grid__1-5</p>
-			</div>
-			<div class="c-grid__1-5 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
-				<p class="u-mg-none">c-grid__1-5</p>
-			</div>
-			<div class="c-grid__1-5 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
-				<p class="u-mg-none">c-grid__1-5</p>
-			</div>
-			<div class="c-grid__1-5 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
-				<p class="u-mg-none">c-grid__1-5</p>
-			</div>
-		</div>
-	</div>
+	</section>
 
-	<div class="wrapper">
-		<h1 class="u-font-mmedium">Buttons</h1>
-		<a href="" class="c-btn">c-btn</a>
-		<a href="" class="c-btn c-btn--icon">
-			<svg class="c-btn__glyph u-fill-grey"><use xlink:href="./dist/svg/material-design-icons.svg#question-answer" /></svg>
-			c-btn--icon
-		</a>
-		<a href="" class="c-btn c-btn--success c-btn--icon">
-			<svg class="c-btn__glyph u-fill-white"><use xlink:href="./dist/svg/material-design-icons.svg#add-box" /></svg>
-			c-btn--success
-		</a>
-		<a href="" class="c-btn c-btn--danger c-btn--icon">
-			<svg class="c-btn__glyph u-fill-white"><use xlink:href="./dist/svg/material-design-icons.svg#delete" /></svg>
-			c-btn--danger
-		</a>
-		<a href="" class="c-btn c-btn--attention">c-btn--attention</a>
-	</div>
+	<section class="u-mgt u-mgb u-pdt u-pdb">
+		<div class="wrapper">
+			<div class="wrapper--sm">
+				<h1>Heading 1</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo aliquid beatae mollitia deleniti natus, veritatis, ipsa et. Reprehenderit rerum illum ipsum eligendi incidunt, ullam aspernatur quo, provident, non laboriosam libero.</p>
+				<h2>Heading 2</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ut tempore ducimus nostrum id velit nesciunt minus iure cumque laudantium voluptate libero exercitationem voluptates, provident unde animi recusandae quo mollitia!</p>
+				<h3>Heading 3</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum iste eaque commodi reprehenderit excepturi culpa temporibus alias officiis, praesentium magni animi quibusdam voluptatibus ipsa. Fugit hic explicabo, vel magnam numquam!</p>
+				<h4>Heading 4</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas maxime enim sed facere repellendus distinctio qui voluptatibus. Aut consequatur et molestias reprehenderit similique aspernatur optio aliquid, dolorem harum accusamus veniam.</p>
+				<h5>Heading 5</h5>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam vel deserunt reprehenderit nulla corrupti, adipisci dolor provident recusandae, mollitia consequatur sint temporibus hic expedita sapiente praesentium aut magni id eius!</p>
+				<h6>Heading 6</h6>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse eum quo sapiente maiores. Minus nostrum asperiores, repudiandae accusamus. Maiores doloribus sint, ipsam voluptate perspiciatis, soluta ab fuga molestias odit tenetur.</p>
+			</div>
+	</section>
+
+	<section class="u-mgt u-mgb u-pdt u-pdb">
+		<div class="wrapper">
+			<div class="c-grid u-mgb-sm">
+				<div class="c-grid__1 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
+					<p class="u-mg-none">c-grid__1</p>
+				</div>
+			</div>
+			<div class="c-grid u-mgb-sm">
+				<div class="c-grid__4-5 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
+					<p class="u-mg-none">c-grid__4-5</p>
+				</div>
+				<div class="c-grid__1-5 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
+					<p class="u-mg-none">c-grid__1-5</p>
+				</div>
+			</div>
+			<div class="c-grid u-mgb-sm">
+				<div class="c-grid__3-4 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
+					<p class="u-mg-none">c-grid__3-4</p>
+				</div>
+				<div class="c-grid__1-4 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
+					<p class="u-mg-none">c-grid__1-4</p>
+				</div>
+			</div>
+			<div class="c-grid u-mgb-sm">
+				<div class="c-grid__2-3 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
+					<p class="u-mg-none">c-grid__2-3</p>
+				</div>
+				<div class="c-grid__1-3 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
+					<p class="u-mg-none">c-grid__1-3</p>
+				</div>
+			</div>
+			<div class="c-grid u-mgb-sm">
+				<div class="c-grid__3-5 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
+					<p class="u-mg-none">c-grid__3-5</p>
+				</div>
+				<div class="c-grid__2-5 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
+					<p class="u-mg-none">c-grid__2-5</p>
+				</div>
+			</div>
+			<div class="c-grid u-mgb-sm">
+				<div class="c-grid__1-2 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
+					<p class="u-mg-none">c-grid__1-2</p>
+				</div>
+				<div class="c-grid__1-2 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
+					<p class="u-mg-none">c-grid__1-2</p>
+				</div>
+			</div>
+			<div class="c-grid u-mgb-sm">
+				<div class="c-grid__2-5 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
+					<p class="u-mg-none">c-grid__2-5</p>
+				</div>
+				<div class="c-grid__3-5 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
+					<p class="u-mg-none">c-grid__3-5</p>
+				</div>
+			</div>
+			<div class="c-grid u-mgb-sm">
+				<div class="c-grid__1-3 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
+					<p class="u-mg-none">c-grid__1-3</p>
+				</div>
+				<div class="c-grid__1-3 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
+					<p class="u-mg-none">c-grid__1-3</p>
+				</div>
+				<div class="c-grid__1-3 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
+					<p class="u-mg-none">c-grid__1-3</p>
+				</div>
+			</div>
+			<div class="c-grid u-mgb-sm">
+				<div class="c-grid__1-4 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
+					<p class="u-mg-none">c-grid__1-4</p>
+				</div>
+				<div class="c-grid__1-4 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
+					<p class="u-mg-none">c-grid__1-4</p>
+				</div>
+				<div class="c-grid__1-4 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
+					<p class="u-mg-none">c-grid__1-4</p>
+				</div>
+				<div class="c-grid__1-4 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
+					<p class="u-mg-none">c-grid__1-4</p>
+				</div>
+			</div>
+			<div class="c-grid u-mgb-sm">
+				<div class="c-grid__1-5 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
+					<p class="u-mg-none">c-grid__1-5</p>
+				</div>
+				<div class="c-grid__1-5 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
+					<p class="u-mg-none">c-grid__1-5</p>
+				</div>
+				<div class="c-grid__1-5 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
+					<p class="u-mg-none">c-grid__1-5</p>
+				</div>
+				<div class="c-grid__1-5 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
+					<p class="u-mg-none">c-grid__1-5</p>
+				</div>
+				<div class="c-grid__1-5 u-pdl-sm u-pdt-sm u-pdb-sm u-bg-light-grey">
+					<p class="u-mg-none">c-grid__1-5</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="u-mgt u-mgb u-pdt u-pdb">
+		<div class="wrapper">
+			<button type="button" href="" class="c-btn">c-btn</button>
+			<button type="button" href="" class="c-btn c-btn--icon">
+				<span>c-btn--icon</span>
+				<svg class="c-btn__glyph u-fill-grey"><use xlink:href="./dist/svg/material-design-icons.svg#question-answer" /></svg>
+			</button>
+			<button type="button" href="" class="c-btn c-btn--success c-btn--icon">
+				<span>c-btn--success</span>
+				<svg class="c-btn__glyph u-fill-white"><use xlink:href="./dist/svg/material-design-icons.svg#add-box" /></svg>
+			</button>
+			<button type="button" href="" class="c-btn c-btn--danger c-btn--icon">
+				<span>c-btn--danger</span>
+				<svg class="c-btn__glyph u-fill-white"><use xlink:href="./dist/svg/material-design-icons.svg#delete" /></svg>
+			</button>
+			<button type="button" href="" class="c-btn c-btn--attention">c-btn--attention</button>
+		</div>
+	</section>
+
+	
 
 	<script src="./dist/js/bundle.js"></script>
 </body>

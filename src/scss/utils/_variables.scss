@@ -8,6 +8,7 @@ $spacing: 							2.25rem;
 // Font family
 $font-heading: 					'Open Sans', 'Arial', sans-serif;
 $font-default:					'Open Sans', 'Arial', sans-serif;
+$font-serif: 						'Georgia', serif;
 
 // Font weights
 $font-weight-black: 		900;
@@ -17,17 +18,20 @@ $font-weight-regular:  	400;
 $font-weight-light:  		300;
 
 // Font sizing (Perfect Fifth ratio thing)
-$font-xsmall: 					0.667;
-$font-small: 						1.0;
-$font-normal: 					1.5;
-$font-medium: 					2.25;
-$font-mmedium: 					3.374;
-$font-large: 						5.062;
-$font-xlarge: 					7.594;
-$font-xxlarge: 					11.391;
-$font-xxxlarge: 				17.086;
-$font-massive: 					25.629;
-$font-giant: 						38.443;
+$font-1: 								1.0;
+$font-2: 								1.5;
+$font-3: 								1.875;
+$font-4: 								2.25;
+$font-5: 								2.812;
+$font-6: 								3.374;
+$font-7: 								4.218;
+$font-8: 								5.062;
+$font-9: 								6.328;
+$font-10: 							7.594;
+$font-11: 							11.391;
+$font-12: 							17.086;
+$font-13: 							25.629;
+$font-14: 							38.443;
 
 // Breakpoints
 $bp-xsmall: 						320px;

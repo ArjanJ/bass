@@ -2,25 +2,6 @@
     #MIXINS - SHADOWS
 \*------------------------------------*/
 
-@function longshadow($color_a,$color_b,$stepnum, $opacity: 1) {
-
-	$gradient_steps: null;
-
-	@for $i from 1 through $stepnum {
-		$weight: ( ( $i - 1 ) / $stepnum ) * 100;
-		$colour_mix: mix($color_b, rgba($color_a, $opacity), $weight);
-		$seperator: null;
-
-		@if($i != $stepnum) {
-			$seperator: #{','};
-		}
-
-		$gradient_steps: append( #{$gradient_steps}, #{$i}px #{$i}px $colour_mix $seperator );
- }
-
-  @return $gradient_steps;
-}
-
 /// Gives a card depth effect.
 /// @param {Number} $depth - depth level (between 1 and 5)
 /// @link http://www.google.com/design/spec/layout/layout-principles.html#layout-principles-dimensionality Google Design

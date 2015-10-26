@@ -16,7 +16,7 @@ $hamburger-width: 30px !default;
   -webkit-tap-highlight-color: transparent;
 
   &:before {
-    @include cover--pseudo;
+    @include cover-pseudo;
     z-index: 5;
     background: none;
   }
@@ -26,7 +26,7 @@ $hamburger-width: 30px !default;
   	height: $hamburger-thickness;
   	background: $hamburger-color;
     pointer-events: none;
-  	@include ease('in-out', 0.25);
+  	@include ease('in-out');
 
   	&:before,
   	&:after {
@@ -36,7 +36,7 @@ $hamburger-width: 30px !default;
   		width: $hamburger-width;
   		height: $hamburger-thickness;
   		background: $hamburger-color;
-  		@include ease('in-out', 0.25);
+  		@include ease('in-out');
   	}
 
   	&:before {
