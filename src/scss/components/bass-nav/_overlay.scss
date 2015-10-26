@@ -1,0 +1,29 @@
+/*------------------------------------*\
+    #BASAL-NAV OVERLAY
+\*------------------------------------*/
+
+.bass-nav__overlay {
+	display: none;
+	position: fixed;
+	z-index: 998;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(black, 0.5);
+	opacity: 0;
+	visibility: hidden;
+	will-change: opacity, visibility;
+	@include ease('in-out');
+
+	&--active {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	@include bp-small {
+		display: block;
+	}
+}

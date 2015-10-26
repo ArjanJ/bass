@@ -5,7 +5,7 @@
 body {
 	height: 100%;
 	font-family: $font-default;
-	@include font-size($font-normal);
+	@include font-size($font-1);
 	overflow-x: hidden;
 	// for smooth font rendering in Chrome and Firefox
 	-webkit-font-smoothing: antialiased;

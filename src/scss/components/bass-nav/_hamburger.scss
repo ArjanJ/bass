@@ -1,0 +1,52 @@
+/*------------------------------------*\
+    #BASAL-NAV HAMBURGER
+\*------------------------------------*/
+
+.bass-nav__hamburger {
+
+  $class: &; // root component class name
+
+  margin: 0 0 0 auto;
+  padding: 0;
+	position: relative;
+  z-index: 1000;
+	cursor: pointer;
+  appearance: none;
+  border: none;
+  background: none;
+	// remove tap highlight on android devices
+	-webkit-tap-highlight-color: rgba(black, 0);
+  -webkit-tap-highlight-color: transparent;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+
+    #{$class}-line {
+      opacity: 0.5;
+    }
+  }
+
+  &-line {
+    display: block;
+    margin: 0 0 5px 0;
+    width: $hamburger-width;
+    height: $hamburger-thickness;
+    background: $hamburger-color;
+    pointer-events: none;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+	@include bp-medium {
+		display: none;
+
+    &--collapsed {
+      display: block;
+    }
+	}
+}

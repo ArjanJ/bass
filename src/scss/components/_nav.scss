@@ -43,7 +43,7 @@
 	}
 
 	@include bp-medium {
-		display: block;
+		display: block !important;
 		transform: none;
 		position: static;
 		height: auto;

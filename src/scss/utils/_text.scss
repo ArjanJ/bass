@@ -2,6 +2,12 @@
     #UTILS - TEXT
 \*------------------------------------*/
 
+.u-font-serif {
+	font-family: $font-serif;
+}
+
+///
+
 .u-txt-upper {
 	text-transform: uppercase;
 }
@@ -9,6 +15,8 @@
 .u-txt-lower {
 	text-transform: lowercase;
 }
+
+///
 
 .u-font-light {
 	font-weight: $font-weight-light;
@@ -22,46 +30,21 @@
 	font-weight: $font-weight-bold;
 }
 
-.u-font-xsmall {
-	@include font-size($font-xsmall);
-}
+///
 
-.u-font-small {
-	@include font-size($font-small);
-}
+.u-font-1 { @include font-size($font-1) }
+.u-font-2 { @include font-size($font-2) }
+.u-font-3 { @include font-size($font-3) }
+.u-font-4 { @include font-size($font-4) }
+.u-font-5 { @include font-size($font-5) }
+.u-font-6 { @include font-size($font-6) }
+.u-font-7 { @include font-size($font-7) }
+.u-font-8 { @include font-size($font-8) }
+.u-font-9 { @include font-size($font-9) }
+.u-font-10 { @include font-size($font-10) }
+.u-font-11 { @include font-size($font-11) }
+.u-font-12 { @include font-size($font-12) }
+.u-font-13 { @include font-size($font-13) }
+.u-font-14 { @include font-size($font-14) }
 
-.u-font-normal {
-	@include font-size($font-normal);
-}
-
-.u-font-medium {
-	@include font-size($font-medium);
-}
-
-.u-font-mmedium {
-	@include font-size($font-mmedium);
-}
-
-.u-font-large {
-	@include font-size($font-large);
-}
-
-.u-font-xlarge {
-	@include font-size($font-xlarge);
-}
-
-.u-font-xxlarge {
-	@include font-size($font-xxlarge);
-}
-
-.u-font-xxxlarge {
-	@include font-size($font-xxxlarge);
-}
-
-.u-font-massive {
-	@include font-size($font-massive);
-}
-
-.u-font-giant {
-	@include font-size($font-giant);
-}
+///

@@ -1,0 +1,21 @@
+@mixin bp-medium {
+	@media screen and (min-width: $bp-medium) {
+		@content;
+	}
+}
+
+@mixin bp-small {
+	@media screen and (min-width: $bp-small) {
+		@content;
+	}
+}
+
+@mixin ease($type: $default-ease, $speed: $default-speed) {
+	@if ($type == 'in') {
+		transition: all $speed+s $ease-in;
+	} @elseif ($type == 'out') {
+		transition: all $speed+s $ease-out;
+	} @elseif ($type == 'in-out') {
+		transition: all $speed+s $ease-in-out;
+	}
+}
